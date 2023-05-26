@@ -1,0 +1,19 @@
+@import '@/styles/mixin';
+
+.tag {
+  width: 26px;
+  height: 10px;
+  padding: 4px 6px;
+  font-size: 10px;
+  @include flexCenter;
+}
+
+.blue {
+  background-color: #256cee;
+  color: #ffffff;
+}
+
+.gray {
+  background-color: #e6e6e6;
+  color: #333333;
+}
