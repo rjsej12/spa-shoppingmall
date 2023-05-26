@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint-moblie}) {
+        @content;
+    }
+}
+
+@mixin nonmoblie {
+    @media (min-width: #{$breakpoint-moblie}) {
+        @content;
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
