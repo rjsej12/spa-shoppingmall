@@ -2,40 +2,39 @@
 @import '@/styles/variables';
 
 @include mobile {
-    .left, .right {
-        display: none;
-    }
+  .left,
+  .right {
+    display: none;
+  }
 
-    .main {
-        width: 100%;
-    }
+  .main {
+    width: 100%;
+  }
 }
 
 @include nonmoblie {
-    .wrapper {
-        display: flex;
-    }
+  .wrapper {
+    display: flex;
+  }
 
-    .left, .right {
-        background: #f2f2f2;
-        flex-grow: 1;
-        height: 100vh;
-    }
+  .left,
+  .right {
+    background: #f2f2f2;
+    flex-grow: 1;
+    height: 100vh;
+  }
 
-    .left {
-        flex-basis: 593px;
-        
-    }
+  .left {
+    flex-basis: 593px;
+  }
 
-    .right {
-        flex-basis: 312px;
-    }
+  .right {
+    flex-basis: 312px;
+  }
 
-    .main {
-        width: #{$breakpoint-moblie};
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
+  .main {
+    width: #{$breakpoint-moblie};
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }
-
-
