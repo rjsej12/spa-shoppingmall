@@ -1,23 +1,28 @@
 @import '@/styles/mixin';
 
 .wrapper {
-    height: 60px;
-    border: 1px solid #000000;
-    border-left: none;
-    border-right: none;
-    @include flexCenter;
+  height: 60px;
+  border: 1px solid #000000;
+  border-left: none;
+  border-right: none;
+  @include flexCenter;
 }
 
-
 .icon_wrapper {
-    width: 60px;
-    font-size: 1.5rem;
-    @include flexCenter;
+  width: 60px;
+  font-size: 1.5rem;
+  @include flexCenter;
+
+  & button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
 }
 
 .title {
-    width: 255px;
-    height: 100%;
-    border: 1px solid #000000;
-    @include flexCenter
+  width: 255px;
+  height: 100%;
+  border: 1px solid #000000;
+  @include flexCenter;
 }
