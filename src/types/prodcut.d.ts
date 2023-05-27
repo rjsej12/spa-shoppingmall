@@ -1,4 +1,4 @@
-declare type Product = {
+type Product = {
   id: number;
   name: string;
   originPrice: number;
@@ -14,4 +14,14 @@ type ProductOption = {
   name: string;
   price: number;
   stock: number;
+};
+
+type SelectedProduct = {
+  id: number;
+  name: string;
+  originPrice: number;
+  price: number;
+  tag: any;
+  imageUrl: string;
+  selectedOption: string;
 };
