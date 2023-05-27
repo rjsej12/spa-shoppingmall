@@ -27,6 +27,19 @@
 
   .left {
     flex-basis: 593px;
+    position: relative;
+
+    & .phrase {
+      position: absolute;
+      display: block;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      top: 50%;
+      right: 30px;
+    }
   }
 
   .right {

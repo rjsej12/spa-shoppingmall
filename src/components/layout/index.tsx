@@ -8,7 +8,11 @@ type ILayoutProps = {
 export default function Layout({ children }: ILayoutProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.left} />
+      <div className={styles.left}>
+        <span className={styles.phrase}>
+          지금 바로 <br /> 리필드를 검색하세요!
+        </span>
+      </div>
       <div className={styles.main}>
         <LayoutHeader />
         <div>{children}</div>
