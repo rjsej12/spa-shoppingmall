@@ -5,3 +5,7 @@ export const getNumberWithComma = (number: number) => {
 export const getDiscountRate = (origin: number, discounted: number) => {
   return Math.floor((discounted / origin) * 100);
 };
+
+export const getTotalPrice = (productList: SelectedProduct[]) => {
+  return productList.reduce((acc, cur) => acc + cur.price, 0);
+};
