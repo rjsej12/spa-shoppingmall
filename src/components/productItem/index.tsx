@@ -52,6 +52,7 @@ export default function ProductItem({ product }: ProductItemProps) {
             product={product}
             contentRef={undefined as never}
             handleFocusCloseButton={undefined as never}
+            toggleModal={toggleModal}
           />
         </Modal>
       ) : null}

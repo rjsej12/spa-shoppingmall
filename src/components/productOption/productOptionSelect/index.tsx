@@ -1,19 +1,22 @@
 import { FiChevronDown } from 'react-icons/fi';
-import { useMemo, useState } from 'react';
+import { SetStateAction, useMemo, useState } from 'react';
 import styles from './index.module.scss';
 
 type ProductOptionSelectProps = {
   options: ProductOption[];
   contentRef: React.RefObject<HTMLElement>;
+  selectedOption: string;
+  setSelectedOption: React.Dispatch<SetStateAction<string>>;
   handleFocusCloseButton: (e: React.KeyboardEvent) => void;
 };
 
 export default function ProductOptionSelect({
   options,
   contentRef,
+  selectedOption,
+  setSelectedOption,
   handleFocusCloseButton,
 }: ProductOptionSelectProps) {
-  const [selectedOption, setSelectedOption] = useState('옵션 선택');
   const [isOptionListShow, setIsOptionListShow] = useState(false);
   const hasOptions = useMemo(() => options.length !== 0, [options]);
 

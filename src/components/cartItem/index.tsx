@@ -2,13 +2,17 @@ import Image from 'next/image';
 import { VscClose } from 'react-icons/vsc';
 import Tag from '@/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
+import useCarts from '@/hooks/useCarts';
 import styles from './index.module.scss';
 
 type CartItemProps = {
+  index: number;
   product: SelectedProduct;
 };
 
-export default function CartItem({ product }: CartItemProps) {
+export default function CartItem({ index, product }: CartItemProps) {
+  const { removeItem } = useCarts();
+
   return (
     <div className={styles.wrapper}>
       <Image width="60" height="60" alt={product.name} src={product.imageUrl} />
@@ -36,7 +40,7 @@ export default function CartItem({ product }: CartItemProps) {
           )}
         </div>
       </div>
-      <VscClose className={styles.delete_button} />
+      <VscClose className={styles.delete_button} onClick={() => removeItem(index)} />
     </div>
   );
 }
