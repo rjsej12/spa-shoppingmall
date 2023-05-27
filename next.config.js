@@ -10,6 +10,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api',
+        destination: 'https://file.refilled.co.kr/assignment/product.json',
+      },
+    ];
+  },
   images: {
     domains: ['s3.ap-northeast-2.amazonaws.com'],
   },
