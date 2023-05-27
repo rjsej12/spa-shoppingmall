@@ -1,0 +1,65 @@
+@import '@/styles/mixin';
+
+.select_wrapper {
+  width: 270px;
+}
+
+.select_button {
+  @include resetButton;
+  @include flexCenter;
+  height: 45px;
+  width: 100%;
+  padding: 16px;
+  justify-content: space-between;
+  border: 1px solid #1a1a1a;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+.no_option {
+  @include resetButton;
+  @include flexCenter;
+  height: 45px;
+  width: 100%;
+  padding: 16px;
+  justify-content: space-between;
+  border: 1px solid #808080;
+  background-color: #f2f2f2;
+  font-size: 13px;
+  color: #808080;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  border: 1px solid #1a1a1a;
+  border-bottom: none;
+  margin-top: 2px;
+  max-height: 136px;
+  overflow-y: scroll;
+
+  & li {
+    cursor: pointer;
+    height: 45px;
+    padding: 16px;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      background: rgb(245 245 245);
+    }
+  }
+}

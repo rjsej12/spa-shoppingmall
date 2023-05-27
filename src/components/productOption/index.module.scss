@@ -1,0 +1,30 @@
+@import '@/styles/mixin';
+
+.wrapper {
+  width: 300px;
+  height: 350px;
+  background: #ffffff;
+  padding: 5px 15px;
+  position: relative;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.add_button {
+  @include resetButton;
+  width: 270px;
+  height: 60px;
+  padding: 21px 84px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  position: absolute;
+  bottom: 16px;
+}
