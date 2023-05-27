@@ -44,7 +44,11 @@ const productList = [
 export default function CartPage() {
   return (
     <div className={styles.wrapper}>
-      <CartItem />
+      <div className={styles.product_list}>
+        {productList.map(product => (
+          <CartItem key={product.id} product={product} />
+        ))}
+      </div>
       <footer className={styles.footer}>
         <button type="button" className={styles.buy_button}>
           {productList.length}개 <div className={styles.vertical} />{' '}

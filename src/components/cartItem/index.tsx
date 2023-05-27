@@ -4,21 +4,11 @@ import Tag from '@/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
 import styles from './index.module.scss';
 
-const product = {
-  id: 1,
-  name: '헤어 리커버리 사이토카인™ 샴푸 플러스',
-  originPrice: 66500,
-  price: 29000,
-  tag: {
-    color: 'gray',
-    text: 'NEW',
-  },
-  imageUrl:
-    'https://s3.ap-northeast-2.amazonaws.com/theconst.kr/condor-img/202207/1656914274085.jpg',
-  selectedOption: '모이스처',
+type CartItemProps = {
+  product: SelectedProduct;
 };
 
-export default function CartItem() {
+export default function CartItem({ product }: CartItemProps) {
   return (
     <div className={styles.wrapper}>
       <Image width="60" height="60" alt={product.name} src={product.imageUrl} />
