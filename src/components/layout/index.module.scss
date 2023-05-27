@@ -9,6 +9,7 @@
 
   .main {
     width: 100%;
+    position: relative;
   }
 }
 
@@ -36,5 +37,6 @@
     width: #{$breakpoint-moblie};
     flex-grow: 0;
     flex-shrink: 0;
+    position: relative;
   }
 }
