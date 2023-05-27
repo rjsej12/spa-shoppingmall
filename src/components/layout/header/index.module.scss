@@ -14,9 +14,7 @@
   @include flexCenter;
 
   & button {
-    cursor: pointer;
-    border: none;
-    background: transparent;
+    @include resetButton;
   }
 }
 
@@ -24,5 +22,8 @@
   width: 255px;
   height: 100%;
   border: 1px solid #000000;
+  border-top: none;
+  border-bottom: none;
+  letter-spacing: -0.04em;
   @include flexCenter;
 }
