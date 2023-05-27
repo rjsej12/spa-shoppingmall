@@ -1,11 +1,17 @@
+@import '@/styles/mixin';
+
 .item {
   list-style: none;
   width: 168px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
   margin-bottom: 32px;
+
+  & button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include resetButton;
+  }
 }
 
 .info_wrapper {
