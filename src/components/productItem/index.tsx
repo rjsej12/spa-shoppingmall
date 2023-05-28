@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Tag from '@/shared/tag';
+import Tag from '@/components/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
 import { useState } from 'react';
-import Modal from '@/shared/modal';
+import Modal from '@/components/shared/modal';
 import ProductOption from '@/components/productOption';
 import styles from './index.module.scss';
 

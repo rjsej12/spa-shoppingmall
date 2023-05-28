@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { VscClose } from 'react-icons/vsc';
-import Tag from '@/shared/tag';
+import Tag from '@/components/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
 import { useCart } from '@/context/CartContext';
 import styles from './index.module.scss';
