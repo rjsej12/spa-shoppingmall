@@ -1,16 +1,19 @@
 @import '@/styles/mixin';
 
 .wrapper {
-  width: 100%;
+  position: relative;
+
   display: flex;
   gap: 12px;
-  position: relative;
+
+  width: 100%;
 }
 
 .item_info {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
   width: 200px;
 }
 
@@ -33,6 +36,7 @@
 .origin_price {
   display: block;
   text-align: right;
+
   font-weight: 300;
   font-size: 12px;
   line-height: 100%;
@@ -43,6 +47,7 @@
 
 .price_wrapper {
   margin-top: 4px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -69,7 +74,9 @@
 .delete_button {
   position: absolute;
   right: 0;
-  color: #333333;
+
   font-size: 20px;
+  color: #333333;
+
   cursor: pointer;
 }

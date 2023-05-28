@@ -8,8 +8,9 @@
   }
 
   .main {
-    width: 100%;
     position: relative;
+
+    width: 100%;
   }
 }
 
@@ -20,26 +21,31 @@
 
   .left,
   .right {
-    background: #f2f2f2;
     flex-grow: 1;
+
     height: auto;
     min-height: 100vh;
+
+    background: #f2f2f2;
   }
 
   .left {
-    flex-basis: 593px;
     position: relative;
+
+    flex-basis: 593px;
 
     & .phrase {
       position: absolute;
+      top: 50vh;
+      right: 30px;
+
       display: block;
+      text-align: center;
+
       font-weight: 700;
       font-size: 25px;
       line-height: 36px;
-      text-align: center;
       letter-spacing: -0.02em;
-      top: 50%;
-      right: 30px;
     }
   }
 
@@ -48,9 +54,11 @@
   }
 
   .main {
-    width: #{$breakpoint-moblie};
+    position: relative;
+
     flex-grow: 0;
     flex-shrink: 0;
-    position: relative;
+
+    width: #{$breakpoint-moblie};
   }
 }

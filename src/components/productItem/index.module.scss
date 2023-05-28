@@ -1,16 +1,19 @@
 @import '@/styles/mixin';
 
 .item {
-  list-style: none;
-  width: 168px;
   padding: 0px;
   margin-bottom: 32px;
 
+  width: 168px;
+
+  list-style: none;
+
   & button {
+    @include resetButton;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @include resetButton;
   }
 }
 
@@ -19,8 +22,10 @@
 }
 
 .name {
-  display: block;
   margin-top: 2px;
+
+  display: block;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -29,8 +34,10 @@
 }
 
 .description {
-  display: block;
   margin-top: 2px;
+
+  display: block;
+
   font-weight: 300;
   font-size: 12px;
   line-height: 150%;
@@ -40,10 +47,12 @@
 
 .origin_price {
   margin-top: 8px;
+
+  text-align: right;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  text-align: right;
   letter-spacing: -0.02em;
   text-decoration-line: line-through;
   color: #666666;
@@ -51,6 +60,7 @@
 
 .price_wrapper {
   margin-top: 4px;
+
   display: flex;
   flex-direction: row;
   gap: 4px;
