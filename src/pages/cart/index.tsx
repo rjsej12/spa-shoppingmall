@@ -1,11 +1,11 @@
 import { getNumberWithComma, getTotalPrice } from '@/utils/math';
 import CartItem from '@/components/cartItem';
-import useCarts from '@/hooks/useCarts';
 import { v4 as uuidv4 } from 'uuid';
+import { useCart } from '@/context/CartContext';
 import styles from './index.module.scss';
 
 export default function CartPage() {
-  const { productList } = useCarts();
+  const { productList } = useCart();
 
   return (
     <div className={styles.wrapper}>

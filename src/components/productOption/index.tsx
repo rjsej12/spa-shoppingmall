@@ -1,7 +1,7 @@
 import ProductOptionSelect from '@/components/productOption/productOptionSelect';
 import { useState } from 'react';
 import DEFAULT_OPTION from '@/constants/product';
-import useCarts from '@/hooks/useCarts';
+import { useCart } from '@/context/CartContext';
 import styles from './index.module.scss';
 
 type ProductOptionProps = {
@@ -18,7 +18,7 @@ export default function ProductOption({
   toggleModal,
 }: ProductOptionProps) {
   const [selectedOption, setSelectedOption] = useState(DEFAULT_OPTION);
-  const { addCarts } = useCarts();
+  const { addCarts } = useCart();
 
   const addCart = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -33,7 +33,6 @@ export default function ProductOption({
       imageUrl,
       selectedOption: selectedOption === DEFAULT_OPTION ? '' : selectedOption,
     };
-    console.log('option', selectedItem);
     addCarts(selectedItem);
     setTimeout(() => {
       toggleModal();

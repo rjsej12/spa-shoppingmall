@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { VscClose } from 'react-icons/vsc';
 import Tag from '@/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
-import useCarts from '@/hooks/useCarts';
+import { useCart } from '@/context/CartContext';
 import styles from './index.module.scss';
 
 type CartItemProps = {
@@ -11,7 +11,7 @@ type CartItemProps = {
 };
 
 export default function CartItem({ index, product }: CartItemProps) {
-  const { removeItem } = useCarts();
+  const { removeItem } = useCart();
 
   return (
     <div className={styles.wrapper}>

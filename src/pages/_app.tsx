@@ -1,4 +1,5 @@
 import Layout from '@/components/layout';
+import { CartProvider } from '@/context/CartContext';
 import '@/styles/globals.scss';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
@@ -9,9 +10,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <CartProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CartProvider>
     </QueryClientProvider>
   );
 }
