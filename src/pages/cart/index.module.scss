@@ -50,3 +50,53 @@
 
   border-left: 1px solid #ffffff;
 }
+
+.no_product {
+  @include flexCenter;
+
+  margin-top: rem(100px);
+
+  flex-direction: column;
+
+  & .title {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: rem(20px);
+    line-height: 160%;
+    letter-spacing: -0.02rem;
+    color: #333333;
+  }
+
+  & .sub {
+    margin: 0;
+    margin-top: rem(5px);
+
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 150%;
+    letter-spacing: -0.02rem;
+    color: #888888;
+  }
+
+  & button {
+    @include resetButton;
+    @include flexCenter;
+
+    margin-top: rem(16px);
+    padding: 0 rem(32px);
+
+    border: 1px solid #e1e1e1;
+    border-radius: rem(4px);
+
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: 300%;
+    letter-spacing: -0.02rem;
+    color: #222222;
+
+    &:hover {
+      background: rgb(245 245 245);
+    }
+  }
+}
