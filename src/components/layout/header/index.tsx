@@ -1,7 +1,7 @@
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FiShoppingCart } from 'react-icons/fi';
 import { useRouter } from 'next/router';
-import ROUTE_PATHS from '@/constants/config';
+import { ROUTE_PATHS } from '@/constants/config';
 import styles from './index.module.scss';
 
 export default function LayoutHeader() {

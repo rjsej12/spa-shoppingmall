@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import Tag from '@/shared/tag';
+import Tag from '@/components/shared/tag';
 import { getDiscountRate, getNumberWithComma } from '@/utils/math';
 import { useState } from 'react';
-import Modal from '@/shared/modal';
+import Modal from '@/components/shared/modal';
 import ProductOption from '@/components/productOption';
+import { BLUR_DATA_URL } from '@/constants/config';
 import styles from './index.module.scss';
 
 type ProductItemProps = {
@@ -23,7 +24,14 @@ export default function ProductItem({ product }: ProductItemProps) {
     <>
       <li className={styles.item}>
         <button type="button" onClick={toggleModal}>
-          <Image width="168" height="168" alt={name} src={imageUrl} />
+          <Image
+            width="168"
+            height="168"
+            alt={name}
+            src={imageUrl}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
+          />
           <div className={styles.info_wrapper}>
             {tag && <Tag text={tag.text} color={tag.color} />}
             <span className={styles.name}>{name}</span>
