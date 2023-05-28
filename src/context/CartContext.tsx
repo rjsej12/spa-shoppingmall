@@ -1,4 +1,4 @@
-import LOCALSTORAGE_CART_KEY from '@/constants/cart';
+import { LOCALSTORAGE_CART_KEY, DEFAULT_CART } from '@/constants/cart';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 type CartContextType = {
@@ -11,11 +11,7 @@ type CartProviderProps = {
   children: JSX.Element;
 };
 
-const CartContext = createContext<CartContextType>({
-  productList: [],
-  addCarts: () => {},
-  removeItem: () => {},
-});
+const CartContext = createContext<CartContextType>(DEFAULT_CART);
 
 export const useCart = () => useContext(CartContext);
 

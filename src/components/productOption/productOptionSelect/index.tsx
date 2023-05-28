@@ -18,6 +18,7 @@ export default function ProductOptionSelect({
   handleFocusCloseButton,
 }: ProductOptionSelectProps) {
   const [isOptionListShow, setIsOptionListShow] = useState(false);
+
   const hasOptions = useMemo(() => options.length !== 0, [options]);
 
   const toggleOptionList = () => {
@@ -43,26 +44,25 @@ export default function ProductOptionSelect({
           <button
             type="button"
             className={styles.select_button}
-            tabIndex={0}
             ref={contentRef as React.RefObject<HTMLButtonElement>}
-            onKeyDown={handleFocusCloseButton}
             onClick={toggleOptionList}
+            onKeyDown={handleFocusCloseButton}
           >
             <span>{selectedOption}</span>
             <FiChevronDown className={styles.icon} role="listbox" />
           </button>
           {isOptionListShow && (
             <ul className={styles.options}>
-              {options.map(option => (
+              {options.map(({ id, name }) => (
                 <li
-                  key={option.id}
-                  onClick={handleClickOption(option.name)}
-                  onKeyDown={handleEnterOption(option.name)}
+                  key={id}
                   role="option"
-                  aria-selected={selectedOption === option.name}
                   tabIndex={0}
+                  aria-selected={selectedOption === name}
+                  onClick={handleClickOption(name)}
+                  onKeyDown={handleEnterOption(name)}
                 >
-                  {option.name}
+                  {name}
                 </li>
               ))}
             </ul>
@@ -72,7 +72,6 @@ export default function ProductOptionSelect({
         <button
           type="button"
           className={styles.no_option}
-          tabIndex={0}
           ref={contentRef as React.RefObject<HTMLButtonElement>}
           onKeyDown={handleFocusCloseButton}
         >

@@ -11,6 +11,8 @@ type ProductItemProps = {
 };
 
 export default function ProductItem({ product }: ProductItemProps) {
+  const { name, originPrice, price, tag, desc, imageUrl } = product;
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -21,27 +23,25 @@ export default function ProductItem({ product }: ProductItemProps) {
     <>
       <li className={styles.item}>
         <button type="button" onClick={toggleModal}>
-          <Image width="168" height="168" alt={product.name} src={product.imageUrl} />
+          <Image width="168" height="168" alt={name} src={imageUrl} />
           <div className={styles.info_wrapper}>
-            {product.tag && <Tag text={product.tag.text} color={product.tag.color} />}
-            <span className={styles.name}>{product.name}</span>
-            <span className={styles.description}>{product.desc}</span>
+            {tag && <Tag text={tag.text} color={tag.color} />}
+            <span className={styles.name}>{name}</span>
+            <span className={styles.description}>{desc}</span>
           </div>
           <div>
-            {product.originPrice ? (
+            {originPrice ? (
               <>
-                <span className={styles.origin_price}>
-                  {getNumberWithComma(product.originPrice)}원
-                </span>
+                <span className={styles.origin_price}>{getNumberWithComma(originPrice)}원</span>
                 <div className={styles.price_wrapper}>
                   <span className={styles.discount_rate}>
-                    {getDiscountRate(product.originPrice, product.price)}%
+                    {getDiscountRate(originPrice, price)}%
                   </span>
-                  <span className={styles.price}>{getNumberWithComma(product.price)}원</span>
+                  <span className={styles.price}>{getNumberWithComma(price)}원</span>
                 </div>
               </>
             ) : (
-              <span className={styles.price}>{getNumberWithComma(product.price)}원</span>
+              <span className={styles.price}>{getNumberWithComma(price)}원</span>
             )}
           </div>
         </button>

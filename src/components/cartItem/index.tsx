@@ -11,32 +11,28 @@ type CartItemProps = {
 };
 
 export default function CartItem({ index, product }: CartItemProps) {
+  const { name, originPrice, price, tag, imageUrl, selectedOption } = product;
+
   const { removeItem } = useCart();
 
   return (
     <div className={styles.wrapper}>
-      <Image width="60" height="60" alt={product.name} src={product.imageUrl} />
+      <Image width="60" height="60" alt={name} src={imageUrl} />
       <div className={styles.item_info}>
-        {product.tag && <Tag text={product.tag.text} color={product.tag.color} />}
-        <span className={styles.name}>{product.name}</span>
-        {product.selectedOption && (
-          <div className={styles.selected_option}>{product.selectedOption}</div>
-        )}
+        {tag && <Tag text={tag.text} color={tag.color} />}
+        <span className={styles.name}>{name}</span>
+        {selectedOption && <span className={styles.selected_option}>{selectedOption}</span>}
         <div>
-          {product.originPrice ? (
+          {originPrice ? (
             <>
-              <span className={styles.origin_price}>
-                {getNumberWithComma(product.originPrice)}원
-              </span>
+              <span className={styles.origin_price}>{getNumberWithComma(originPrice)}원</span>
               <div className={styles.price_wrapper}>
-                <span className={styles.discount_rate}>
-                  {getDiscountRate(product.originPrice, product.price)}%
-                </span>
-                <span className={styles.price}>{getNumberWithComma(product.price)}원</span>
+                <span className={styles.discount_rate}>{getDiscountRate(originPrice, price)}%</span>
+                <span className={styles.price}>{getNumberWithComma(price)}원</span>
               </div>
             </>
           ) : (
-            <span className={styles.price}>{getNumberWithComma(product.price)}원</span>
+            <span className={styles.price}>{getNumberWithComma(price)}원</span>
           )}
         </div>
       </div>

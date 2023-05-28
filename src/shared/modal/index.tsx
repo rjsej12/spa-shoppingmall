@@ -40,10 +40,10 @@ export default function Modal({ children, toggleModal }: ModalProps) {
     <div className={styles.modal_background} onClick={handleClickOutside} aria-hidden="true">
       <div ref={modalRef}>{childrenWithProps}</div>
       <button
-        ref={closeButtonRef}
-        onKeyDown={handleFocusModal}
         type="button"
+        ref={closeButtonRef}
         className={styles.a11y_hidden}
+        onKeyDown={handleFocusModal}
       >
         Close
       </button>

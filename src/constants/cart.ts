@@ -1,3 +1,7 @@
-const LOCALSTORAGE_CART_KEY = 'carts';
+export const LOCALSTORAGE_CART_KEY = 'carts';
 
-export default LOCALSTORAGE_CART_KEY;
+export const DEFAULT_CART = {
+  productList: [],
+  addCarts: () => {},
+  removeItem: () => {},
+};

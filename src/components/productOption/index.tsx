@@ -17,13 +17,15 @@ export default function ProductOption({
   handleFocusCloseButton,
   toggleModal,
 }: ProductOptionProps) {
+  const { id, name, originPrice, price, tag, imageUrl, productOptions } = product;
+
   const [selectedOption, setSelectedOption] = useState(DEFAULT_OPTION);
+
   const { addCarts } = useCart();
 
-  const addCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClickAddButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    const { id, name, originPrice, price, tag, imageUrl } = product;
     const selectedItem: SelectedProduct = {
       id,
       name,
@@ -34,21 +36,23 @@ export default function ProductOption({
       selectedOption: selectedOption === DEFAULT_OPTION ? '' : selectedOption,
     };
     addCarts(selectedItem);
+
     setTimeout(() => {
       toggleModal();
     });
   };
+
   return (
     <form className={styles.wrapper}>
-      <h1 className={styles.name}>{product.name}</h1>
+      <h1 className={styles.name}>{name}</h1>
       <ProductOptionSelect
-        options={product.productOptions}
+        options={productOptions}
         contentRef={contentRef}
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
         handleFocusCloseButton={handleFocusCloseButton}
       />
-      <button type="submit" className={styles.add_button} onClick={addCart}>
+      <button type="submit" className={styles.add_button} onClick={handleClickAddButton}>
         장바구니 담기
       </button>
     </form>
