@@ -1,0 +1,29 @@
+@import '@/styles/function';
+
+.title {
+  margin-top: rem(26px);
+  margin-left: rem(18px);
+
+  display: flex;
+  flex-direction: column;
+
+  width: rem(230px);
+  height: rem(60px);
+
+  font-weight: 500;
+  font-size: rem(20px);
+  line-height: 150%;
+  letter-spacing: -0.02rem;
+}
+
+.description {
+  color: #808080;
+}
+
+.product_list {
+  padding: 0 rem(16px);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

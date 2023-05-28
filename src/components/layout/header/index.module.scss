@@ -1,0 +1,37 @@
+@import '@/styles/mixin';
+@import '@/styles/function';
+
+.wrapper {
+  @include flexCenter;
+
+  height: rem(60px);
+
+  border: 1px solid #000000;
+  border-left: none;
+  border-right: none;
+}
+
+.icon_wrapper {
+  @include flexCenter;
+
+  width: rem(60px);
+
+  font-size: rem(24px);
+
+  & button {
+    @include resetButton;
+  }
+}
+
+.title {
+  @include flexCenter;
+
+  width: rem(255px);
+  height: 100%;
+
+  border: 1px solid #000000;
+  border-top: none;
+  border-bottom: none;
+
+  letter-spacing: -0.04rem;
+}

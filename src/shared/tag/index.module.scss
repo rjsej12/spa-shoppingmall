@@ -1,0 +1,23 @@
+@import '@/styles/mixin';
+@import '@/styles/function';
+
+.tag {
+  @include flexCenter;
+
+  padding: rem(4px) rem(6px);
+
+  width: rem(38px);
+  height: rem(18px);
+
+  font-size: rem(10px);
+}
+
+.blue {
+  background-color: #256cee;
+  color: #ffffff;
+}
+
+.gray {
+  background-color: #e6e6e6;
+  color: #333333;
+}
