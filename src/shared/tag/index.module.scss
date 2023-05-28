@@ -1,14 +1,15 @@
 @import '@/styles/mixin';
+@import '@/styles/function';
 
 .tag {
   @include flexCenter;
 
-  padding: 4px 6px;
+  padding: rem(4px) rem(6px);
 
-  width: 38px;
-  height: 18px;
+  width: rem(38px);
+  height: rem(18px);
 
-  font-size: 10px;
+  font-size: rem(10px);
 }
 
 .blue {

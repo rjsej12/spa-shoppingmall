@@ -1,38 +1,39 @@
 @import '@/styles/mixin';
+@import '@/styles/function';
 
 .wrapper {
-  padding: 5px 15px;
+  padding: rem(5px) rem(15px);
 
   position: relative;
 
-  width: 300px;
-  height: 350px;
+  width: rem(300px);
+  height: rem(350px);
 
   background: #ffffff;
 }
 
 .name {
   font-weight: 500;
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 150%;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
 }
 
 .add_button {
   @include resetButton;
 
-  padding: 21px 84px;
+  padding: rem(21px) rem(84px);
 
   position: absolute;
-  bottom: 16px;
+  bottom: rem(16px);
 
-  width: 270px;
-  height: 60px;
+  width: rem(270px);
+  height: rem(60px);
 
   background-color: #1a1a1a;
 
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 100%;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
   color: #ffffff;
 }

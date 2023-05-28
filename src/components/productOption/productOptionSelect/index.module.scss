@@ -1,25 +1,26 @@
 @import '@/styles/mixin';
+@import '@/styles/function';
 
 .select_wrapper {
-  width: 270px;
+  width: rem(270px);
 }
 
 .select_button {
   @include flexCenter;
   @include resetButton;
 
-  padding: 16px;
+  padding: rem(16px);
 
   justify-content: space-between;
 
   width: 100%;
-  height: 45px;
+  height: rem(45px);
 
   border: 1px solid #1a1a1a;
 
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 150%;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
 
   cursor: pointer;
 }
@@ -28,31 +29,31 @@
   @include flexCenter;
   @include resetButton;
 
-  padding: 16px;
+  padding: rem(16px);
 
   justify-content: space-between;
 
   width: 100%;
-  height: 45px;
+  height: rem(45px);
 
   border: 1px solid #808080;
   background-color: #f2f2f2;
 
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 150%;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
   color: #808080;
 }
 
 .icon {
-  font-size: 20px;
+  font-size: rem(20px);
 }
 
 .options {
-  margin-top: 2px;
+  margin-top: rem(2px);
   padding: 0;
 
-  max-height: 136px;
+  max-height: rem(136px);
 
   border: 1px solid #1a1a1a;
   border-bottom: none;
@@ -61,19 +62,19 @@
   overflow-y: scroll;
 
   & li {
-    padding: 16px;
+    padding: rem(16px);
 
     display: flex;
     align-items: center;
 
-    height: 45px;
+    height: rem(45px);
 
     border-bottom: 1px solid #1a1a1a;
 
     font-weight: 400;
-    font-size: 13px;
+    font-size: rem(13px);
     line-height: 150%;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.02rem;
 
     cursor: pointer;
 

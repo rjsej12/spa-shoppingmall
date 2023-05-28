@@ -1,9 +1,10 @@
 @import '@/styles/mixin';
+@import '@/styles/function';
 
 .wrapper {
   @include flexCenter;
 
-  height: 60px;
+  height: rem(60px);
 
   border: 1px solid #000000;
   border-left: none;
@@ -13,9 +14,9 @@
 .icon_wrapper {
   @include flexCenter;
 
-  width: 60px;
+  width: rem(60px);
 
-  font-size: 1.5rem;
+  font-size: rem(24px);
 
   & button {
     @include resetButton;
@@ -25,12 +26,12 @@
 .title {
   @include flexCenter;
 
-  width: 255px;
+  width: rem(255px);
   height: 100%;
 
   border: 1px solid #000000;
   border-top: none;
   border-bottom: none;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.04rem;
 }

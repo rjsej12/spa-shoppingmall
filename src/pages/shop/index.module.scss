@@ -1,17 +1,19 @@
+@import '@/styles/function';
+
 .title {
-  margin-top: 26px;
-  margin-left: 18px;
+  margin-top: rem(26px);
+  margin-left: rem(18px);
 
   display: flex;
   flex-direction: column;
 
-  width: 229px;
-  height: 60px;
+  width: rem(230px);
+  height: rem(60px);
 
   font-weight: 500;
-  font-size: 20px;
+  font-size: rem(20px);
   line-height: 150%;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02rem;
 }
 
 .description {
@@ -19,7 +21,7 @@
 }
 
 .product_list {
-  padding: 0 16px;
+  padding: 0 rem(16px);
 
   display: flex;
   flex-wrap: wrap;

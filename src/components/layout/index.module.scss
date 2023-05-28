@@ -1,5 +1,6 @@
 @import '@/styles/mixin';
 @import '@/styles/variables';
+@import '@/styles/function';
 
 @include mobile {
   .left,
@@ -32,25 +33,25 @@
   .left {
     position: relative;
 
-    flex-basis: 593px;
+    flex-basis: rem(593px);
 
     & .phrase {
       position: absolute;
       top: 50vh;
-      right: 30px;
+      right: rem(30px);
 
       display: block;
       text-align: center;
 
       font-weight: 700;
-      font-size: 25px;
-      line-height: 36px;
+      font-size: rem(25px);
+      line-height: rem(36px);
       letter-spacing: -0.02em;
     }
   }
 
   .right {
-    flex-basis: 312px;
+    flex-basis: rem(312px);
   }
 
   .main {
