@@ -37,6 +37,8 @@ https://spa-shoppingmall.vercel.app
 
 ## 동작 화면
 
+![demo](https://github.com/rjsej12/spa-shoppingmall/assets/107838130/a66e128d-e0ae-4c13-bf13-9322a0b24278)
+
 <br/>
 
 ## 사용한 라이브러리
