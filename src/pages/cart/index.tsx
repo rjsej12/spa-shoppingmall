@@ -3,7 +3,7 @@ import CartItem from '@/components/cartItem';
 import { v4 as uuidv4 } from 'uuid';
 import { useCart } from '@/context/CartContext';
 import { useRouter } from 'next/router';
-import ROUTE_PATHS from '@/constants/config';
+import { ROUTE_PATHS } from '@/constants/config';
 import styles from './index.module.scss';
 
 export default function CartPage() {
